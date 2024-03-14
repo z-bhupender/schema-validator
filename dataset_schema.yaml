@@ -5,7 +5,7 @@ contact_id: _meta(contact_id)
 cat1: _meta(cat1)
 cat2: _meta(cat2)
 agent_name: _meta(agent_name)
-agentid: _meta(agentid)
+agentid: _meta(agentd)
 supervisor_pk: _meta(supervisor_pk)
 agent_pk: _meta(agent_pk)
 calldirection: _meta(calldirection)
@@ -15,7 +15,7 @@ timestamp: _meta(starttime)
 base_path: _meta(base_path)
 file_path: _meta(file_path)
 calltype: _gpt(libs/dev/config/ally/rules/gpt_rules/templates_2/configuration.json,calltype)
-metadata:
+metadta:
   model_details:
     calltype:
       version: _constant(9,string)
@@ -48,9 +48,9 @@ metadata:
 scores:
   rules.negotiation_flow.unwilling.probing_questions:
     AI_Scores:
-      score: _rulepath(libs/dev/config/ally/rules/ally_negotiation_flow_unwilling_probing_questions.r=>ally_negotiation_flow_unwilling_probing_questions, int)
+      score: _rulepath(libs/dev/config/ally/rules/ally_negotiation_flow_unwilling_probing_questions.r=>negotiation_flow_unwilling_probing_questions, int)
       score_date: _datenow(%m-%d-%Y %H:%M:%S)
       matching_transcripts:
-        _rulepath(libs/dev/config/ally/rules/ally_negotiation_flow_unwilling_probing_questions.r=>ally_negotiation_flow_unwilling_probing_questions,
+        _rulepath(libs/dev/config/rules/ally_negotiation_flow_unwilling_probing_questions.r=>ally_negotiation_flow_unwilling_probing_questions,
         transcript)
   rules.negotiation_flow.unwilling.other_income: _gpt(libs/dev/config/ally/rules/gpt_rules/templates_3/configuration_proc_1197_2.json, rules.negotiation_flow.vague.other_income)
