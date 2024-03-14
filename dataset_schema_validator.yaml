@@ -1,0 +1,150 @@
+---
+type: object
+properties:
+  version:
+    type: string
+    const: "_constant(2.0,string)"
+  call_id:
+    type: string
+    const: "_meta(call_id)"
+  contact_id:
+    type: string
+    const: "_meta(contact_id)"
+  cat1:
+    type: string
+    const: "_meta(cat1)"
+  cat2:
+    type: string
+    const: "_meta(cat2)"
+  agent_name:
+    type: string
+    const: "_meta(agent_name)"
+  agentid:
+    type: string
+    const: "_meta(agentid)"
+  supervisor_pk:
+    type: string
+    const: "_meta(supervisor_pk)"
+  agent_pk:
+    type: string
+    const: "_meta(agent_pk)"
+  calldirection:
+    type: string
+    const: "_meta(calldirection)"
+  supervisor_user_name:
+    type: string
+    const: "_meta(supervisor_user_name)"
+  agent_user_name:
+    type: string
+    const: "_meta(agent_user_name)"
+  timestamp:
+    type: string
+    const: "_meta(starttime)"
+  base_path:
+    type: string
+    const: "_meta(base_path)"
+  file_path:
+    type: string
+    const: "_meta(file_path)"
+  calltype:
+    type: string
+    const: "_gpt(libs/dev/config/ally/rules/gpt_rules/templates_2/configuration.json,calltype)"
+  metadata:
+    type: object
+    properties:
+      model_details:
+        type: object
+        properties:
+          calltype:
+            type: object
+            properties:
+              version:
+                type: string
+                const: "_constant(9,string)"
+              name:
+                type: string
+                const: "_constant(v9,string)"
+              description:
+                type: string
+                const: "_constant(Using GPT Single Pass, string)"
+              date:
+                type: string
+                const: "_constant(2023-12-13,string)"
+              dataset:
+                type: object
+                properties:
+                  version:
+                    type: string
+                    const: "_constant(0,string)"
+                  description:
+                    type: string
+                    const: "_constant(No Dataset, string)"
+          rules.negotiation_flow.unwilling.probing_questions:
+            type: object
+            properties:
+              version:
+                type: string
+                const: "_constant(7.3,string)"
+              name:
+                type: string
+                const: "_constant(v7.3,string)"
+              description:
+                type: string
+                const: "_constant(Using ZenNLU with old Luis Rules and regex and .r parser
+                  rules, string)"
+              date:
+                type: string
+                const: "_constant(2022-12-21,string)"
+              dataset:
+                type: object
+                properties:
+                  version:
+                    type: string
+                    const: "_constant(5,string)"
+                  description:
+                    type: string
+                    const: "_constant(intent labeled on each transcripts and customized training
+                      dataset for luis app, string)"
+          rules.negotiation_flow.unwilling.other_income:
+            type: object
+            properties:
+              version:
+                type: string
+                const: "_constant(9,string)"
+              name:
+                type: string
+                const: "_constant(v9,string)"
+              description:
+                type: string
+                const: "_constant(Using GPT Single Pass, string)"
+              date:
+                type: string
+                const: "_constant(2023-12-13,string)"
+              dataset:
+                type: object
+                properties:
+                  version:
+                    type: string
+                    const: "_constant(0,string)"
+                  description:
+                    type: string
+                    const: "_constant(No Dataset, string)"
+  scores:
+    type: object
+    properties:
+      rules.negotiation_flow.unwilling.probing_questions:
+        type: object
+        properties:
+          score:
+            type: string
+            const: "_rulepath(libs/dev/config/ally/rules/ally_negotiation_flow_unwilling_probing_questions.r=>ally_negotiation_flow_unwilling_probing_questions, int)"
+          score_date:
+            type: string
+            const: "_datenow(%m-%d-%Y %H:%M:%S)"
+          matching_transcripts:
+            type: string
+            const: "_rulepath(libs/dev/config/ally/rules/ally_negotiation_flow_unwilling_probing_questions.r=>ally_negotiation_flow_unwilling_probing_questions,
+              transcript)"
+      rules.negotiation_flow.unwilling.other_income:
+        type: string
+        const: "_gpt(libs/dev/config/ally/rules/gpt_rules/templates_3/configuration_proc_1197_2.json, rules.negotiation_flow.vague.other_income)"
