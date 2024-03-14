@@ -1,0 +1,23 @@
+---
+name: Schema Validator
+
+on:
+  pull_request:
+    branches:
+      - main
+      - beta
+
+jobs:
+  validate-schema:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Install jsonschema
+      run: pip install jsonschema
+
+    - name: Validate YAML Schema
+      run: |
+        python -c 'import jsonschema, yaml; schema = yaml.safe_load(open("dataset_schema_validator.yaml")); data = yaml.safe_load(open("dataset_schema.yaml")); jsonschema.validate(data, schema)'
